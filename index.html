@@ -11,6 +11,135 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link rel="stylesheet" href="./assets/base.css" />
+    <link rel="stylesheet" href="./assets/main.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="app">
+      <div class="inner app__background1">
+        <header class="header">
+          <div class="location">
+            <i class="location--icon fa-solid fa-location-dot"></i>
+            <span class="location--name">Florida</span>
+            <i class="location--icon--down fa-solid fa-angle-down"></i>
+          </div>
+
+          <i class="location--notication fa-regular fa-bell"></i>
+        </header>
+
+        <main class="main">
+          <img class="img" src="./assets/images/raining.png" />
+          <div class="info">
+            <span class="info__temperature">30</span>
+            <div class="info__type">precipitations</div>
+            <div class="progres">
+              <span>Min: 23</span>
+              <span>Max: 25</span>
+            </div>
+          </div>
+
+          <div class="other-info">
+            <div class="other-info__inner">
+              <div class="other-info__element">
+                <span class="element__icon"
+                  ><i class="fa-solid fa-cloud-rain"></i
+                ></span>
+                <span class="element__text">6%</span>
+              </div>
+
+              <div class="other-info__element">
+                <span class="element__icon"
+                  ><i class="fa-solid fa-cloud-rain"></i
+                ></span>
+                <span class="element__text">6%</span>
+              </div>
+
+              <div class="other-info__element">
+                <span class="element__icon"
+                  ><i class="fa-solid fa-cloud-rain"></i
+                ></span>
+                <span class="element__text">6%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info__today">
+            <div class="info__today__inner">
+              <div class="inner__date">
+                <span class="day">Monday</span>
+                <span class="month">Mar, 19</span>
+              </div>
+
+              <div class="inner__element">
+                <div class="elemet__item">
+                  <span class="item__temperature">29</span>
+                  <img class="item__img" src="./assets/images/storm (1).png" />
+                  <span class="item__time">15.00</span>
+                </div>
+
+                <div class="elemet__item active">
+                  <span class="item__temperature">29</span>
+                  <img class="item__img" src="./assets/images/raining.png" />
+                  <span class="item__time">15.00</span>
+                </div>
+
+                <div class="elemet__item">
+                  <span class="item__temperature">29</span>
+                  <img class="item__img" src="./assets/images/storm (1).png" />
+                  <span class="item__time">15.00</span>
+                </div>
+
+                <div class="elemet__item">
+                  <span class="item__temperature">29</span>
+                  <img class="item__img" src="./assets/images/storm (1).png" />
+                  <span class="item__time">15.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- next day -->
+          <div class="info__next-day">
+            <div class="next-day__inner">
+              <div class="inner__title">
+                <span class="title__text">Next Forecast</span>
+                <i class="title__icon fa-regular fa-calendar-days"></i>
+              </div>
+
+              <div class="inner__content">
+                <div class="content__weather">
+                  <span class="weather__day">MonDay</span>
+                  <img
+                    class="weather__status"
+                    src="./assets//images/raining.png"
+                  />
+                  <span class="weather__min-max">
+                    <span>29</span>
+                    <span>34</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="inner__content">
+                <div class="content__weather">
+                  <span class="weather__day">TuescxcxDay</span>
+                  <img
+                    class="weather__status"
+                    src="./assets//images/raining.png"
+                  />
+                  <span class="weather__min-max">
+                    <span>29</span>
+                    <span>34</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer"></footer>
+      </div>
+    </div>
+  </body>
 </html>

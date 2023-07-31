@@ -1,1 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat&family=PT+Sans&family=REM&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat&family=PT+Sans&family=REM&family=Roboto+Mono&family=Roboto:wght@300;400&display=swap");
+
+:root {
+  --white-color: #fff;
+  --black-color: rgb(0, 16, 38);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.app__background1 {
+  background-image: linear-gradient(to bottom, #08244f, #134cb5, #0b42ab);
+}
+.app__background2 {
+  background-image: linear-gradient(to bottom, #29b2dd, #33aadd, #2dc8ea);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

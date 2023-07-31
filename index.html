@@ -20,12 +20,16 @@
       <div class="inner app__background1">
         <header class="header">
           <div class="location">
-            <i class="location--icon fa-solid fa-location-dot"></i>
-            <span class="location--name">Florida</span>
-            <i class="location--icon--down fa-solid fa-angle-down"></i>
+            <i class="location__icon fa-solid fa-location-dot"></i>
+            <span class="location__name">Florida</span>
           </div>
-
-          <i class="location--notication fa-regular fa-bell"></i>
+          <div class="location__element">
+            <div class="search">
+              <input class="search__input" />
+              <i class="search__icon fa-solid fa-magnifying-glass-location"></i>
+            </div>
+            <i class="location__notification fa-regular fa-bell"></i>
+          </div>
         </header>
 
         <main class="main">
@@ -43,21 +47,20 @@
             <div class="other-info__inner">
               <div class="other-info__element">
                 <span class="element__icon"
-                  ><i class="fa-solid fa-cloud-rain"></i
+                  ><i class="fa-solid fa-cloud-sun"></i>
+                <span class="element__text">6%</span>
+              </div>
+
+              <div class="other-info__element">
+                <span class="element__icon"
+                  ><i class="fa-solid fa-temperature-low"></i
                 ></span>
                 <span class="element__text">6%</span>
               </div>
 
               <div class="other-info__element">
                 <span class="element__icon"
-                  ><i class="fa-solid fa-cloud-rain"></i
-                ></span>
-                <span class="element__text">6%</span>
-              </div>
-
-              <div class="other-info__element">
-                <span class="element__icon"
-                  ><i class="fa-solid fa-cloud-rain"></i
+                  ><i class="fa-solid fa-wind"></i
                 ></span>
                 <span class="element__text">6%</span>
               </div>
@@ -141,5 +144,13 @@
         <footer class="footer"></footer>
       </div>
     </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./index.js"></script>
   </body>
 </html>

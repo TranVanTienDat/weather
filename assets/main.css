@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .inner {
   width: 450px;
+  height: 100%;
 }
 
 .header {

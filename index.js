@@ -1,4 +1,4 @@
-const API_WEATHER = "http://api.weatherapi.com/v1";
+const API_WEATHER = "https://api.weatherapi.com/v1";
 const KEY = "7a19f77b214041f8a29123748233007";
 
 const fetchData = async (name) => {

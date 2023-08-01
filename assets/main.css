@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .inner {
@@ -23,15 +22,15 @@
 }
 
 .location__icon {
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 .location__name {
-  font-size: 1.6rem;
+  font-size: 2rem;
   margin: 0 24px 0 9px;
 }
 .location__icon-right,
 .location__notification {
-  font-size: 1.6rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 .location__notification {
@@ -48,7 +47,7 @@
 }
 
 .search__input {
-  padding: 6px;
+  padding: 8px 6px;
   border-radius: 12px;
   border: none;
   outline: none;
@@ -58,8 +57,8 @@
 .search__icon {
   content: "";
   position: absolute;
-  font-size: 1.6rem;
-  right: 0;
+  font-size: 1.7rem;
+  right: 3px;
   top: 0;
   padding: 5px;
   color: #134cb5;
@@ -306,4 +305,81 @@
 }
 .weather__min-max span:nth-child(2) {
   color: #d0c4c4;
+}
+
+/* page intro */
+.page {
+  margin: 0 40px;
+  color: var(--white-color);
+}
+
+.page__heading {
+  font-size: 2.8rem;
+  line-height: 1;
+  margin: 40px 0;
+  font-weight: 400;
+}
+
+.page__intro {
+  background-color: rgba(0, 16, 38, 0.18);
+  border-radius: 10px;
+  padding: 10px 12px;
+  overflow: hidden;
+}
+
+.intro__background {
+  width: 100%;
+  background-color: var(--white-color);
+  margin: 26px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: calc(-100% - 12px);
+}
+
+.intro__background:nth-child(1) {
+  animation: animate 0.8s linear forwards;
+}
+
+.intro__background:nth-child(2) {
+  animation: animate 0.8s linear 0.5s forwards;
+}
+
+.intro__background:nth-child(3) {
+  animation: animate 0.8s linear 1s forwards;
+}
+
+.intro__title {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.intro__icon {
+  color: var(--white-color);
+  font-size: 2rem;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #134cb5;
+}
+
+.intro__img {
+  width: 140px;
+  margin: 30px 0 0 0;
+}
+
+/*  no result */
+.no-results {
+  margin: 40px 20px;
+}
+
+.no__img {
+}
+
+.no__text {
+  font-size: 3rem;
+  margin-top: 26px;
+  color: var(--white-color);
 }

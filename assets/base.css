@@ -18,10 +18,11 @@ html {
 }
 
 .app__background1 {
-  background-image: linear-gradient(to bottom, #08244f, #134cb5, #0b42ab);
-}
-.app__background2 {
   background-image: linear-gradient(to bottom, #29b2dd, #33aadd, #2dc8ea);
+}
+
+.app__background2 {
+  background-image: linear-gradient(to bottom, #08244f, #134cb5, #0b42ab);
 }
 
 .flex {
@@ -36,4 +37,21 @@ html {
 
 .none {
   display: none;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  90% {
+    transform: translateX(calc(100% + 28px));
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateX(calc(100% + 12px));
+    opacity: 1;
+  }
 }

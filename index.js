@@ -17,6 +17,9 @@ const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
 // className
+const mainInner = $(".main__inner");
+const page = $(".page");
+const noResult = $(".no-results");
 const nameCountry = $(".location__name");
 const openSearch = $(".location__icon-right");
 const closeSearch = $(".search__close");
@@ -37,14 +40,12 @@ const innerHour = $(".inner__element");
 const elementItem = $(".elemet__item");
 const min = $(".min");
 const max = $(".max");
-
+const inner = $(".inner");
 // next days
-
 const weatherNextDay = $(".weather__day");
 const innerContent = $(".inner__content");
 
 //  handle logic
-
 // Handle get days and months
 const handleDate = (arg) => {
   const date = arg ? new Date(arg) : new Date();
@@ -95,9 +96,14 @@ const handleMapHour = (id) => {
 };
 
 // handle  get current hour
-const getCurrentHour = (id) => {
+const getCurrentHour = () => {
   const date = new Date();
   const hour = date.getHours();
+  const check = 4 < hour && hour < 19;
+  if (!check) {
+    inner.classList.remove("app__background1");
+    inner.classList.add("app__background2");
+  }
   const log = hour < 10 ? `0${hour}:00` : `${hour}:00`;
   return log;
 };
@@ -146,16 +152,25 @@ SearchLocation.addEventListener("click", async function () {
     min.innerHTML = `Min: ${forecast.day.mintemp_c}`; // nhiệt độ cao nhất
     max.innerHTML = `Max: ${forecast.day.maxtemp_c}`; //  nhiệt độ thấp nhất
 
-    const date = handleDate(); // lấy ra thời gian từ handleDate() (kiểu mảng)
+    const date = handleDate(); // lấy ra thời gian từ handleDate() (array)
     day.innerHTML = date[0];
     month.innerHTML = `${date[1]}, ${date[2]}`;
     const html = handleMapHour(forecast.hour);
     innerHour.innerHTML = html.join("");
-    getCurrentHour(forecast.hour); // xử lí thời gian từ api
 
     //  next days
     handleNextDay(result.forecast);
+
+    noResult.classList.remove("block");
+    mainInner.classList.remove("none");
+    noResult.classList.add("none");
+    mainInner.classList.add("block");
+    page.classList.add("none");
   } catch (error) {
     console.log(error);
+    page.classList.remove("block");
+    noResult.classList.remove("none");
+    page.classList.add("none");
+    noResult.classList.add("block");
   }
 });

@@ -45,7 +45,6 @@
 
 .search {
   position: relative;
-  animation: searchAnimate 0.6s linear;
 }
 
 .search__input {
@@ -53,6 +52,7 @@
   border-radius: 12px;
   border: none;
   outline: none;
+  width: 160px;
 }
 
 .search__icon {
@@ -92,7 +92,7 @@
   position: absolute;
   content: "o";
   color: var(--white-color);
-  right: -20px;
+  right: auto;
   top: 10px;
   font-size: 3.4rem;
   font-weight: 500;
@@ -191,12 +191,12 @@
 .elemet__item {
   display: flex;
   flex-direction: column;
-  margin: 0 10px;
+  padding: 10px;
+
   color: var(--white-color);
 }
 
 .active {
-  padding: 10px;
   border-radius: 20px;
   background-color: rgba(37, 102, 163, 0.2);
 }
@@ -210,8 +210,8 @@
   position: absolute;
   content: "o";
   top: -4px;
-  right: 1px;
-  font-size: 1.3rem;
+  right: auto;
+  font-size: 1.1rem;
 }
 
 .item__img {
@@ -253,6 +253,17 @@
 
 .inner__content {
   margin-top: 12px;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 140px;
+}
+
+.inner__content::-webkit-scrollbar {
+  height: 0;
+}
+
+.content {
+  margin: 12px 0;
 }
 
 .content__weather {
@@ -286,24 +297,13 @@
   position: relative;
   margin: 5px;
 }
-span::after {
+.weather__min-max span::after {
   position: absolute;
   content: "o";
   top: -5px;
-  right: -6px;
-  font-size: 1rem;
+  right: auto;
+  font-size: 0.9rem;
 }
 .weather__min-max span:nth-child(2) {
   color: #d0c4c4;
-}
-
-@keyframes searchAnimate {
-  from {
-    margin-left: -20%;
-    opacity: 0;
-  }
-  to {
-    margin-left: 0;
-    opacity: 1;
-  }
 }

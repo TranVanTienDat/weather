@@ -137,7 +137,6 @@ const handleNextDay = (id) => {
 SearchLocation.addEventListener("click", async function () {
   try {
     const valueSearch = valueInput.value;
-    valueInput.value = "";
     const result = await fetchData(valueSearch);
     //  info weather to day
     const current = result.current;
@@ -157,6 +156,7 @@ SearchLocation.addEventListener("click", async function () {
     month.innerHTML = `${date[1]}, ${date[2]}`;
     const html = handleMapHour(forecast.hour);
     innerHour.innerHTML = html.join("");
+    valueInput.value = "";
 
     //  next days
     handleNextDay(result.forecast);
@@ -170,7 +170,9 @@ SearchLocation.addEventListener("click", async function () {
     console.log(error);
     page.classList.remove("block");
     noResult.classList.remove("none");
+    mainInner.classList.remove("block");
     page.classList.add("none");
+    mainInner.classList.add("none");
     noResult.classList.add("block");
   }
 });

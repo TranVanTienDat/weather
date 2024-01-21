@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
+  
 }
 
 .inner {
-  width: 100%;
+  max-width:450px;
 }
 
 .header {
